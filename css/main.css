@@ -1,0 +1,478 @@
+
+html{
+	scroll-behavior: smooth;
+}
+
+body{
+font-family: Georgia, Times, 'Times New Roman', serif;
+color:#333;
+font-size: 1.0rem;
+line-height: 1.5em;
+margin: 0;
+}
+
+section[id]{
+	scroll-margin-top: 130px;
+}
+h1{
+	font-size: 2rem;
+	line-height: 1.3em;
+}
+p{
+	margin-bottom: 1.6em;}
+
+.container {
+	width: 85%;
+	max-width: 850px;
+	margin: 0 auto;
+}
+.header{
+	background: #f2f2f2;
+	color: green;
+	padding: 0.5rem 0;
+
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+}
+
+.header a{
+	color: green;
+	text-decoration: none;
+}
+.logo-nav-container{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+
+
+.menu-icon{
+display: none;	
+}
+
+.logo img {
+	width: 130px;
+	height: 80px;
+}
+
+.navigation ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.navigation ul li {
+	display: inline-block;
+}
+
+.navigation ul li a {
+	display: block;
+	padding: 0.3rem 0.8rem;
+	transition: all 0.2s linear;
+
+}
+/* fondo cuando paso mouse sobre un item del menu*/
+.navigation ul li a:hover {
+	
+background-color:limegreen;
+}
+
+
+.main {
+	padding-top: 10rem;
+}
+.footer {
+	background:#f2f2f2;
+	padding: 1rem 0;
+	text-align: center;
+	margin-bottom: 0;
+	position: fixed;
+	/*fijamos el pie para que no sea scroleable*/
+	position: fixed;
+	left: 0;
+	right: 0;
+  	bottom: 0;
+}
+.pie{
+	font-size: 0.7rem;
+	font-family: 'roboto' 'Times New Roman', Times, serif;
+	text-align: center;
+}
+
+@media only screen and (max-width: 767px) {
+
+	.menu-icon{
+		display:block;
+		cursor: pointer;	
+		padding: 0.5rem 1rem;
+		}
+
+	.navigation{
+		width:100%;
+		margin-top: 1rem;
+	}
+
+	.navigation ul{
+	display: none;
+	}
+
+	.navigation ul.show{
+		display: block;
+	}
+	.navigation ul li {
+		display: block;
+	}
+	
+	.navigation ul li a {
+		display: block;
+		padding: 0.5rem 1.0rem;
+		transition: all 0.25s linear;
+	}
+	
+	.navigation ul li a:hover {
+	background-color:springgreen;
+	}
+	
+	section .plan_nombre{
+		width: 280px;
+		
+	}
+	section .efecto_3d{
+		font-size: 25px;
+	}
+	section[id]{
+		scroll-margin-top: 140px;
+	}
+
+
+}
+/* defino las clases para cada producto. */
+/*
+.cards h3{
+	text-align: center;
+	padding: 5px;
+	color: #333;
+	text-decoration: none;
+
+}*/
+
+
+.cards{
+	width: 100%;
+	display: flex;
+	font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	color: dimgrey;
+	gap: 20px;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+
+}
+.plan_nombre{
+	width: 350px;
+	padding: 10px;
+	box-shadow: 1px 1px 5px rgb(75, 77, 76);
+	border:solid rgb(3, 133, 255,0) 5px;
+	border-radius: 5%;
+	
+}
+.plan_nombre:hover{
+	border: solid rgb(111, 230, 170) 5px;
+	transition:ease-in-out 0.5s;
+}
+
+
+.plan_nombre img {
+	width: 200px;
+	border-radius: 5%;
+	box-shadow: 2px 2px 5px rgb(216, 216, 216);
+	
+
+}
+.card_planes{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+}
+
+.plan_descripcion{
+	font-size: medium;
+	text-align: center;
+
+}
+
+.parrafo_info{
+	font-size: 15px;
+}
+
+.ws img{
+	width: 28px;
+	height: 28px;
+	/*align-items: center;*/
+	
+
+}
+.plan_descripcion a{
+	text-decoration: none;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 12px;
+
+}
+.enlace a{
+	display: flex;
+	align-items: center;
+	justify-content: right;
+	
+	color:gray;
+	font-size: 13px;
+	
+	}
+/*SECCION AYUDA*/
+
+.contenedor{
+	width: 850px;
+	background-color: rgb(74, 240, 102);
+	box-shadow: 7px 15px 37px rgb(75, 77, 76);
+	padding: 30px;
+
+}
+
+.contenedor section p {
+	overflow:hidden;
+	max-height: 0;
+	text-align: justify;
+	font-family: 'Courier New', Courier, monospace;
+	background-color: #fff;
+	transition: all .2s ease-in-out;
+}
+
+.contenedor section a {
+text-decoration: none;
+display: block;
+text-align: left;
+padding: 10px;
+font-family: 'Courier New', Courier, monospace;
+background-color: rgb(189, 255, 127);
+color: #000;
+border-bottom: 2px solid gray;
+}
+
+section:target p{
+	max-height: 120px;
+	padding: 10px;
+}
+/*generar imagen con fondo transparente*/
+
+
+.escribe{
+
+	width: 100%;
+	display: flex;
+	font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	color: dimgrey;
+	gap: 10px;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+.map-responsive{
+
+    overflow:hidden;
+
+    padding-bottom:56.25%;
+
+    position:relative;
+
+    height:0;
+
+}
+
+.map-responsive iframe{
+
+    left:0;
+
+    top:0;
+
+    height:100%;
+
+    width:100%;
+
+    position:absolute;
+
+}
+.remove-bg{
+	filter:brightness(1.1);
+	mix-blend-mode: multiply;
+}
+
+
+/*EFECTOS ESPECIALES*/
+
+.efecto_neon {text-align: left; 
+	font-family: Arial; 
+	font-size: 20px; 
+	COLOR: #b8b6b300; 
+	text-shadow: 0px 2px 3px #1f1cf5;
+}
+
+.efecto_contorno {
+		text-align: left; 
+		font-family: Arial Black; 
+		font-weight: bold; 
+		font-size: 30px; 
+		color: #fff; 
+		text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+}
+
+.efecto_3d {
+			text-align: center;
+			padding: 5px;
+			color: rgb(248, 149, 20);
+			text-decoration: none;
+			/*text-align: left; */
+			font-family: Arial Black;
+			font-weight: bold; 
+			font-size: 30px; 
+			/*color: #fff; */
+			text-shadow: 0 1px 0 #ddd, 0 2px 0 #ccc, 0 3px 0 rgb(187, 187, 187), 0 4px 0 #aaa, 0 5px 0 #acacac, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.3), 0 3px 5px rgba(0,0,0,0.2), 0 5px 10px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.2), 0 20px 20px rgba(0,0,0,0.15);
+}
+
+.efecto_relieve {
+				text-align: left; 
+				font-family: Arial Black; 
+				font-weight: bold; font-size: 30px; 
+				background: #202020; 
+				-webkit-background-clip: text; 
+				-moz-background-clip: text; 
+				background-clip: text; 
+				color: transparent; 
+				text-shadow: 0px 3px 3px rgba(255,255,255,0.4),0px -1px 1px rgba(0,0,0,0.3);
+}
+
+.efecto_sombra_alargada{
+	text-align: left; 
+	font-family: Comic Sans MS; 
+	font-weight:bold; 
+	font-size: 30px; 
+	color: #EBD758; 
+	text-shadow: -1px 0 #414D68, 0 1px #414D68, 1px 0 #414D68, 0 -1px #414D68, -2px 2px 0 #414D68, 2px 2px 0 #414D68, 1px 1px #414D68, 2px 2px #414D68, 3px 3px #414D68, 4px 4px #414D68, 5px 5px #414D68;/* 6px 6px #414D68, 7px 7px #414D68, 8px 8px #414D68, 9px 9px #414D68;
+*/}
+
+.flecha-verde{
+	color:lime;
+
+}
+
+.burbuja{
+	
+	/*border-radius: 50%;*/
+	/*background: rgb(41, 241, 85);*/
+	opacity: .2;
+	position: absolute;
+	bottom: -150;
+	animation: burbujas 3s linear infinite;
+}
+
+.burbuja:nth-child(1){
+	width: 80px;
+	height: 80px;
+	left: 5%;
+	animation-duration: 3s;
+	animation-delay: 2.5s;
+}
+
+.burbuja:nth-child(2){
+	width: 100px;
+	height: 100px;
+	left: 35%;
+	animation-duration: 2s;
+	animation-delay: 5s;
+}
+
+.burbuja:nth-child(3){
+	width: 50px;
+	height: 50px;
+	left: 55%;
+	animation-duration: 15s;
+	animation-delay: 1s;
+}
+
+.burbuja:nth-child(4){
+	width: 75px;
+	height: 75px;
+	left: 65%;
+	animation-duration: 3s;
+	animation-delay: 5s;
+}
+
+.burbuja:nth-child(5){
+	width: 50px;
+	height: 50px;
+	left: 75%;
+	animation-duration: 8s;
+	animation-delay: 4s;
+}
+
+.burbuja:nth-child(6){
+	width: 15px;
+	height: 15px;
+	left: 80%;
+	animation-duration: 6s;
+	animation-delay: 2s;
+}
+.burbuja:nth-child(7){
+	width: 100px;
+	height: 100px;
+	left: 90%;
+	animation-duration: 7s;
+	animation-delay: 5s;
+}
+
+.burbuja:nth-child(8){
+	width: 35px;
+	height: 35px;
+	left: 95%;
+	animation-duration: 3s;
+	animation-delay: 1.5s;
+}
+.burbuja:nth-child(9){
+	width: 40px;
+	height: 40px;
+	left: 20%;
+	animation-duration: 6s;
+	animation-delay: 3s;
+}
+.burbuja:nth-child(10){
+	width: 10px;
+	height: 10px;
+	left: 1%;
+	animation-duration: 10s;
+	animation-delay: 8s;
+}
+.burbuja:nth-child(11){
+	width: 25px;
+	height: 25px;
+	left: 15%;
+	animation-duration: 5s;
+	animation-delay: 8s;
+}
+
+@keyframes burbujas {
+	0%{
+		bottom: 0;
+		opacity: 0;
+	}
+	50%{
+		opacity: .4;
+	}
+	100%{
+		bottom: 100vh;
+		opacity: 0;
+	}
+	
+}
